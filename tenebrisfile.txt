@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-tenebris for merging
-=======
-tenebris text
-tenebris vonuchka
->>>>>>> d7ddff20ca537970a174b250f906f999ef2177d7
