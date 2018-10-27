@@ -12,8 +12,8 @@ namespace SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Test1 = "This is a test message that demostrates capabilites of a ViewBag.";
-            ViewBag.Test0 = "This shouldn't exist..";
+            // tipo
+            ViewBag.Poem = Models.Mein_net_<string>.Start();
             return View();
         }
 
