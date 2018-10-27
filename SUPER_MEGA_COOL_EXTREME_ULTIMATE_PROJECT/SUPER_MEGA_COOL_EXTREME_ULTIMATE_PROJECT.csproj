@@ -153,7 +153,43 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\addirionDLL\OrderedSet.cs" />
+    <Compile Include="Models\config\Config.cs" />
+    <Compile Include="Models\dao.ado.connectors\ADOSQLiteConnector.cs" />
+    <Compile Include="Models\dao.ado\ADOBaseCreator.cs" />
+    <Compile Include="Models\dao.ado\ADOPositionDAO.cs" />
+    <Compile Include="Models\dao.ado\ADOVerseDAO.cs" />
+    <Compile Include="Models\dao.ado\ADOVocabularyWordDAO.cs" />
+    <Compile Include="Models\dao.factories\ADODAOFactory.cs" />
+    <Compile Include="Models\dao\AlreadyExistsException.cs" />
+    <Compile Include="Models\dao\EmptyRecordException.cs" />
+    <Compile Include="Models\dao\NotExistsException.cs" />
+    <Compile Include="Models\dao\PositionDAO.cs" />
+    <Compile Include="Models\dao\StorageCreator.cs" />
+    <Compile Include="Models\dao\VerseDAO.cs" />
+    <Compile Include="Models\dao\VocabularyWordDAO.cs" />
+    <Compile Include="Models\Mein%28net%29.cs" />
+    <Compile Include="Models\model\Position.cs" />
+    <Compile Include="Models\model\PositionValue.cs" />
+    <Compile Include="Models\model\Verse.cs" />
+    <Compile Include="Models\model\VocabularyWord.cs" />
+    <Compile Include="Models\NeuralHandler\NeuralHandler.cs" />
+    <Compile Include="Models\ngram\NGramStrategy.cs" />
+    <Compile Include="Models\ngram\Unigram.cs" />
+    <Compile Include="Models\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Models\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Models\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Models\observer\Observable.cs" />
+    <Compile Include="Models\observer\Observer.cs" />
     <Compile Include="Models\Poem.cs" />
+    <Compile Include="Models\Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Properties\Resources.Designer.cs" />
+    <Compile Include="Models\Properties\Settings.Designer.cs" />
+    <Compile Include="Models\root\Form1.cs" />
+    <Compile Include="Models\root\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\root\Program.cs" />
     <Compile Include="Models\SuperAmazingTestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -164,11 +200,26 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\addirionDLL\encog-core-cs.dll" />
+    <Content Include="Models\bin\Debug\CyberPushkin.exe" />
+    <Content Include="Models\bin\Debug\CyberPushkin.pdb" />
+    <Content Include="Models\bin\Debug\CyberPushkin.vshost.exe" />
+    <Content Include="Models\obj\Debug\CyberPushkin.csproj.FileListAbsolute.txt" />
+    <Content Include="Models\obj\Debug\CyberPushkin.exe" />
+    <Content Include="Models\obj\Debug\CyberPushkin.pdb" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Models\bin\Debug\CyberPushkin.exe.config" />
+    <Content Include="Models\bin\Debug\CyberPushkin.vshost.exe.config" />
+    <Content Include="Models\bin\Debug\CyberPushkin.vshost.exe.manifest" />
+    <Content Include="Models\obj\Debug\CyberPushkin.csproj.GenerateResource.Cache" />
+    <Content Include="Models\obj\Debug\CyberPushkin.csprojResolveAssemblyReference.cache" />
+    <Content Include="Models\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="Models\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Models\Properties\Settings.settings" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -206,6 +257,10 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Models\obj\Debug\CyberPushkin.Properties.Resources.resources" />
+    <EmbeddedResource Include="Models\Properties\Resources.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
