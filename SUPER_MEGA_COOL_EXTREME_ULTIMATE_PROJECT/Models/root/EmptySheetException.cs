@@ -9,7 +9,8 @@ namespace CyberPushkin.root
     public class EmptySheetException : Exception
     {
        public EmptySheetException(String s) : base(s)
-        {           
+        {      
+                 
         }
     }
 }

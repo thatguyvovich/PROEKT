@@ -16,6 +16,7 @@ namespace CyberPushkin.root
         {
             if (nGramStrategy == null)
             {
+
                 throw new ArgumentException();
             }
 
