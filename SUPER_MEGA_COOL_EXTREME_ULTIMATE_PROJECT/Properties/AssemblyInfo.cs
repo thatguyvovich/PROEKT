@@ -33,6 +33,8 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 [assembly: AssemblyVersion("0.0.0.0")]
 [assembly: AssemblyFileVersion("0.0.0.0")]
+[assembly: InternalsVisibleTo("SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT.Tests")]
+[assembly: InternalsVisibleTo("SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT.Explorables")]
 
 
 // NOTE: Travis doesn't like this pre-build command: "C:\Program Files\Git\bin\git.exe" describe --long > "$(ProjectDir)\version.txt"
