@@ -32,12 +32,37 @@ namespace SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT.Models
                 }
             }
         }
+
+        public Poem(string[] s)
+        {
+            _poemWords = s.ToList<string>();
+        }
+
         public List<string> GetPoem()
         {
             return _poemWords;
         }
-
     }
+    /// <summary>
+    /// Set of words.
+    /// </summary>
+    public class WordSet
+    {
+        private List<string[]> ListOfPoems = new List<string[]>();
+        public WordSet(string[] s)
+        {
 
+        }
+
+        public void AddToSet(Poem s)
+        {
+            ListOfPoems.Add(s.GetPoem().ToArray());
+        }
+
+        public int GetSize()
+        {
+            return ListOfPoems.Count;
+        }
+    }
 
 }

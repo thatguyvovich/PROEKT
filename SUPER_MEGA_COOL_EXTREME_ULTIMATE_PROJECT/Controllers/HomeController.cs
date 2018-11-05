@@ -11,11 +11,10 @@ namespace SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT.Controllers
     {
         public readonly string gitVersion = System.IO.File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory.ToString(), "version.txt"));
 
-        List<SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT.Models.Poem> /*ochen' lol*/ Poems = new List<Models.Poem>();
+        List<SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT.Models.Poem>  Poems = new List<Models.Poem>();
 
         public ActionResult Index()
         {
-            // tipo
             ViewBag.Poem = Models.Mein_net_<string>.Start();
             return View();
         }
