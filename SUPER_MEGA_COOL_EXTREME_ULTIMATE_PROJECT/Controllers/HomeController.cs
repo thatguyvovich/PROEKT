@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.IO;
 using System.Web.Mvc;
 
 namespace SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT.Controllers
@@ -20,7 +21,8 @@ namespace SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
+            string gitVersion = System.IO.File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory.ToString(), "version.txt"));
+            ViewBag.Version = gitVersion;
             return View();
         }
 

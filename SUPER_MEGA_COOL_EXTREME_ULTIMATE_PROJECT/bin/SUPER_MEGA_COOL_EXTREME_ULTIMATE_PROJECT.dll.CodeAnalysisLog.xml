@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\enterprise\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\bin\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT.dll">
+   <Modules>
+    <Module Name="super_mega_cool_extreme_ultimate_project.dll">
+     <Namespaces>
+      <Namespace Name="CyberPushkin.dao">
+       <Types>
+        <Type Name="AlreadyExistsException" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'AlreadyExistsException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="EmptyRecordException" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'EmptyRecordException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="NotExistsException" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'NotExistsException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="CyberPushkin.dao.ado">
+       <Types>
+        <Type Name="ADOBaseCreator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#executeQueries(System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\dao.ado" File="ADOBaseCreator.cs" Line="81">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'ADOBaseCreator.executeQueries(List&lt;string&gt;)' could contain the following variables 'sqlQuery'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ADOPositionDAO" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#getAllPossibleValues(System.Data.SqlClient.SqlConnection,CyberPushkin.model.Position)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\dao.ado" File="ADOPositionDAO.cs" Line="111">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'ADOPositionDAO.getAllPossibleValues(SqlConnection, Position)' could contain the following variables 'positon.getId()'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#getLastCharacteristicPossibleValueId(System.Data.SqlClient.SqlConnection,CyberPushkin.model.Position)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\dao.ado" File="ADOPositionDAO.cs" Line="173">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'ADOPositionDAO.getLastCharacteristicPossibleValueId(SqlConnection, Position)' could contain the following variables 'positon.getId()'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#insertPossibleValue(System.Data.SqlClient.SqlConnection,CyberPushkin.model.Position,CyberPushkin.model.PositionValue)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\dao.ado" File="ADOPositionDAO.cs" Line="148">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'ADOPositionDAO.insertPossibleValue(SqlConnection, Position, PositionValue)' could contain the following variables 'newCharacteristicValueId', 'positon.getId()', 'positonValue.getValue()'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#isCharacteristicExistsInDB(System.Data.SqlClient.SqlConnection,CyberPushkin.model.Position)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\dao.ado" File="ADOPositionDAO.cs" Line="129">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'ADOPositionDAO.isCharacteristicExistsInDB(SqlConnection, Position)' could contain the following variables 'positon.getName()'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#searchCharacteristicPossibleValue(System.Data.SqlClient.SqlConnection,CyberPushkin.model.Position,CyberPushkin.model.PositionValue)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\dao.ado" File="ADOPositionDAO.cs" Line="160">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'ADOPositionDAO.searchCharacteristicPossibleValue(SqlConnection, Position, PositionValue)' could contain the following variables 'positon.getId()', 'positonValue.getValue()'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ADOVerseDAO" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#addAll(System.Collections.Generic.List`1&lt;CyberPushkin.model.Verse&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Provide correct arguments to formatting methods" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="UnexpectedFormatStringCharacter" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\dao.ado" File="ADOVerseDAO.cs" Line="91">Method 'ADOVerseDAO.addAll(List&lt;Verse&gt;)' calls 'string.Format(string, object)' with a format string that contains an unexpected character '"\'"' at index '44'. The provided format string is: '"INSERT INTO ExpandableTexts (Text) VALUES ({\'0\'})"'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fillCharacteristicNamesAndValuesIDs(System.Data.SqlClient.SqlConnection,CyberPushkin.model.Verse)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\dao.ado" File="ADOVerseDAO.cs" Line="154">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'ADOVerseDAO.fillCharacteristicNamesAndValuesIDs(SqlConnection, Verse)' could contain the following variables 'entry.Key.getName()', 'entry.Value.getValue()'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#getCharacteristicsValues(System.Data.SqlClient.SqlConnection,System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\dao.ado" File="ADOVerseDAO.cs" Line="127">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'ADOVerseDAO.getCharacteristicsValues(SqlConnection, int)' could contain the following variables 'expandableTextId'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#insertToExpandableTextsCharacteristicsTable(System.Data.SqlClient.SqlConnection,System.Int32,CyberPushkin.model.Position,CyberPushkin.model.PositionValue)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Provide correct arguments to formatting methods" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="UnexpectedFormatStringCharacter" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\dao.ado" File="ADOVerseDAO.cs" Line="176">Method 'ADOVerseDAO.insertToExpandableTextsCharacteristicsTable(SqlConnection, int, Position, PositionValue)' calls 'string.Format(string, object, object, object)' with a format string that contains an unexpected character '"}"' at index '118'. The provided format string is: '"INSERT INTO ExpandableTextsCharacteristics (ExpandableTextId, CharacteristicsNam..."'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ADOVocabularyWordDAO" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#addAll(System.Collections.Generic.List`1&lt;CyberPushkin.model.VocabularyWord&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\dao.ado" File="ADOVocabularyWordDAO.cs" Line="88">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'ADOVocabularyWordDAO.addAll(List&lt;VocabularyWord&gt;)' could contain the following variables 'vocabularyWord.getValue()'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="CyberPushkin.NeuralHandler">
+       <Types>
+        <Type Name="NeuralHandler" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#findWordInVocabulary(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\NeuralHandler" File="NeuralHandler.cs" Line="258">'NeuralHandler.findWordInVocabulary(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#train(System.Collections.Generic.List`1&lt;CyberPushkin.model.Verse&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Provide correct arguments to formatting methods" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="DependsOnFix">
+             <Issue Name="MissingFormatItem" Certainty="75" Level="Warning" Path="C:\Users\Vovich\source\repos\PROEKT\SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT\Models\NeuralHandler" File="NeuralHandler.cs" Line="178">Method 'NeuralHandler.train(List&lt;Verse&gt;)' calls 'string.Format(string, object)' and does not provide a format item for argument "1". The provided format string is: '"%.2f"'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="CyberPushkin.root">
+       <Types>
+        <Type Name="EmptySheetException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'EmptySheetException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SUPER_MEGA_COOL_EXTREME_ULTIMATE_PROJECT.Models">
+       <Types>
+        <Type Name="NotAwesomeEnoughException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2018-11-05 09:29:13Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'NotAwesomeEnoughException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237">
+   <Name>Mark ISerializable types with SerializableAttribute</Name>
+   <Description>The System.Runtime.Serialization.ISerializable interface allows the type to customize its serialization, while the Serializable attribute enables the runtime to recognize the type as being serializable.</Description>
+   <Resolution Name="Default">Add [Serializable] to {0} as this type implements ISerializable.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182350.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Provide correct arguments to formatting methods" Category="Microsoft.Usage" CheckId="CA2241">
+   <Name>Provide correct arguments to formatting methods</Name>
+   <Description>Provide the correct number of arguments to String.Format calls.</Description>
+   <Resolution Name="MissingFormatItem">Method {0} calls {1} and does not provide a format item for argument {2}. The provided format string is: '{3}'</Resolution>
+   <Resolution Name="UnexpectedFormatStringCharacter">Method {0} calls {1} with a format string that contains an unexpected character '{2}' at index '{3}'. The provided format string is: '{4}'</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182361.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>Rethrow to preserve stack details</Name>
+   <Description>Use the IL rethrow instruction to preserve original stack details when re-raising a caught exception.</Description>
+   <Resolution Name="Default">{0} rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>
