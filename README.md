@@ -40,8 +40,10 @@ Team *P.fm*:
 
 ## Built with
 
-* Visual Studio 2017
-* Travis CI
+* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
+* [Travis CI](https://travis-ci.com/)
+* [Visual StyleCop](https://marketplace.visualstudio.com/items?itemName=ChristopheHEISER.VisualStyleCop)
+* [Gendarme](https://www.mono-project.com/docs/tools+libraries/tools/gendarme/)
 
 ## Acknowledgments
 
